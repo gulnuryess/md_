@@ -167,10 +167,9 @@ if(isset($_SESSION['pay'])){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 
     <!-- Style -->
-    <link rel="stylesheet/less" type="text/css" media="all" href="style/style.less">
+    <link rel="stylesheet/less" type="text/css" media="all" href="style.less?id=1">
     <script src="js/less.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="js/like/social-likes_classic.css">
-
     <!-- JS -->
     <script src="js/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="js/sweetalert/dist/sweetalert.css">
@@ -188,7 +187,12 @@ if(isset($_SESSION['pay'])){
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-center">Сделайте репост в соц. сетях и получи<br>доступ к бесплатному пробному уроку</h4>
+            <h4 class="modal-title text-center" style="    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;">Сделайте репост в соц. сетях и получи<br>доступ к бесплатному пробному уроку</h4>
           </div>
           <div class="modal-body">
             <center><img style="width: 50%;" src="img/desktop.png"></center>
@@ -245,8 +249,12 @@ if(isset($_SESSION['pay'])){
     <!-- /Modal -->
 
     <!-- SECTION HEADER -->
-    <div class="container-fluid" id="headerSection">
-      <div class="container_my" style="background-color: black;">
+    <div class="container-fluid" id="headerSection" style="	#headerSection{
+    		.container_my{
+    			padding: 35px 5% 0px 5%;
+    		}
+    	}">
+      <div class="container_my" style="background-color: black; ">
 
       <div class="content">
 
@@ -256,7 +264,21 @@ if(isset($_SESSION['pay'])){
             <p class="logoType">STUDY</p>
             <p class="logoSlogan" style="color:#777777;">ПРОГРЕССИВНЫЕ БУХГАЛТЕРСКИЕ<br>КУРСЫ ПО ВСЕМУ КАЗАХСТАНУ</p>
           </div>
-          <div class="addingPeople">
+          <div class="addingPeople" style=".addingPeople .proff {
+    position: absolute;
+    top: 0;
+    right: 170px;
+    font-size: 10px;
+    color: white;
+    font-family: inherit;
+    border: 0;
+    background-color: #80397b;
+    outline: none;
+    border-radius: 0 0 3px 3px;
+    padding: 6px;
+    padding-left: 6px;
+    font-weight: 300;
+}">
             <input type="button" checked value="ПРОФЕССИОНАЛ" class="proff" >
             <input type="button" value="НОВИЧОК" class="newo">
             <script>
@@ -299,9 +321,16 @@ display:block;">
             <p style="color:white"><?php echo $curr_text;?></p>
             <p style="color: white"><?php echo $curr_add;?></p>
             <div class="coupon"><span style="color:white"><?php echo $curr_block;?></span></div>
-            <div class="buttons">
+            <div class="buttons" style=".buttons a:nth-child(1) span {
+    background: #38b630;
+    padding: 10px 10px;
+    border-radius: 2px;
+    float: left;
+    color: white;
+    cursor: pointer;
+}">
 
-              <u class="menu"><a href="#packetsSection" onclick="spoilerClicked()"><span>СКАЧАТЬ ПРОГРАММУ</span></a></u>
+              <u class="menu" ><a href="#packetsSection" onclick="spoilerClicked()"><span>СКАЧАТЬ ПРОГРАММУ</span></a></u>
               <a href="login.php"><span  >ВОЙТИ В СИСТЕМУ</span></a></div>
 
 
@@ -1261,9 +1290,12 @@ display:block;">
 </div>
     <!-- SECTION FOOTER -->
     <div class="container-fluid"  style="
-    position: relative;
+    position: relative
+    ;
 "id="footerSection">
-      <div class="container_my">
+      <div class="container_my" style=".container_my {
+    padding: 0px 5% 0px 5%;
+}">
 
       <div class="content">
 
